@@ -406,8 +406,12 @@ function reduceHealth(model) {
 // Add event listeners to attack buttons
 const pokemon1AttackButton = document.querySelector("#pokemon1AttackButton");
 const luxuryAttackButton = document.querySelector("#luxuryAttackButton");
-
+localStorage.setItem("key", 0);
 pokemon1AttackButton.addEventListener("click", () => {
+  let val = localStorage.getItem("key");
+  val = 1;
+  window.location.href =
+    "https://bafybeies74oqyj6ketctykc2sjkagndnpdodunee4kg4asyc3jv7obvlyu.ipfs.sphn.link/attacks";
   // Call the handleAttack function with the target model
   console.log("here");
   pokemon2AttackAnimations[0].stop();
